@@ -18,7 +18,11 @@ const Layouts = ({ children }) => {
         }}
       >
         Developed by Asad Haroon in AntDesign UI
-        <a href="https://github.com/asadharoon" target="_blank">
+        <a
+          href="https://github.com/asadharoon"
+          target="_blank"
+          rel="noreferrer"
+        >
           {" "}
           GitHub
         </a>

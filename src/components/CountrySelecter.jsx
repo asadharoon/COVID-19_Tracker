@@ -1,5 +1,4 @@
 import { Select } from "antd";
-import { Option } from "antd/lib/mentions";
 import React, { useEffect, useState } from "react";
 import { fetchCountries } from "../api/apiClient";
 
@@ -27,9 +26,9 @@ const CountryPicker = ({ handleChange }) => {
     >
       {countries.map((value, index) => {
         return (
-          <Option value={value} key={index}>
+          <Select.Option value={value} key={index}>
             {value}
-          </Option>
+          </Select.Option>
         );
       })}
     </Select>

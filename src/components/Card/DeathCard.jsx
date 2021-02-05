@@ -3,7 +3,6 @@ import CardComponent from "./Card";
 import CountUp from "react-countup";
 import TextField from "../common/TextField";
 const DeathCard = ({ data, loading }) => {
-  const fontSize = { fontSize: window.innerHeight * 0.0202 };
   return (
     <CardComponent loading={loading} borderColor="#f70d1a">
       {!loading && (
@@ -41,8 +40,9 @@ const DeathCard = ({ data, loading }) => {
             />
           </div>
           <TextField
+            id="text"
             text={"Number of deaths caused by COVID-19"}
-            style={{ fontSize: fontSize.fontSize, padding: 20 }}
+            style={{ padding: 20 }}
           />
         </div>
       )}

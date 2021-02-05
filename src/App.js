@@ -1,6 +1,5 @@
 import "./App.css";
-import CardComponent from "./components/Card/Card";
-import { Col, Row } from "antd";
+import { Row } from "antd";
 import Layouts from "./components/Layout/Layout";
 import "antd/dist/antd.css";
 import { useEffect, useState } from "react";
@@ -18,7 +17,6 @@ function App() {
   const [country, setCountry] = useState("");
   useEffect(() => {
     getReport().then((res) => {
-      console.log(res.data);
       setData(res.data);
       setLoading(false);
     });
@@ -40,6 +38,7 @@ function App() {
         }}
       >
         <img
+          alt="logo"
           src={require("./assets/image.png").default}
           width={150}
           style={{ alignSelf: "center", marginBottom: 10 }}
@@ -59,7 +58,7 @@ function App() {
           }}
         >
           <TextField
-            text={country != "" ? "Country Wise" : "Global Stats"}
+            text={country !== "" ? "Country Wise" : "Global Stats"}
             style={{
               alignSelf: "center",
               fontSize: 18,
